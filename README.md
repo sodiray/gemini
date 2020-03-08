@@ -84,5 +84,5 @@ A language runtime is a python module that exposes a standard set of functions t
 - `create_migration(new_version: str, parent_version: str, name: str)`
 - `setup()`
 
-#### Should you use Gemini?
+## Should you use Gemini?
 Gemini isn't for everyone and all projects. In order to make it generic enough to work in such a variety of projects we've had to let go of some _standard_ database migration tool features. One example is dynamically building a migration script based on changes to your model. Theoretically, we could develop this feature... it would just mean adding to the boilerplate code every user needs to write. Each user would need to write project specific boiler plate so Gemini could interact with that projects models. On the other hand - if you have an older project with no migration management, or maybe just a directory of raw SQL scripts and want to add in a migration manager, or you have a variety of project with a variety of languages and you would like to unify the migration management for CI/CD and developer sake, or you prefer not to use a tool that forces itself into your application code - Gemini might be a good tool for you. So, there are the pros, cons, limitations, and features to using Gemini.
